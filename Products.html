@@ -340,22 +340,6 @@
 
             <div class="flex overflow-x-scroll">
 
-              <div class="w-40 px-2">
-                <label for="toggle-example" class="flex w-36 items-center cursor-pointer relative float-start mt-1 pr-5">
-                  <input type="checkbox" id="toggle-example" class="sr-only">
-                  <div class="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full"></div>
-                  <span class="ml-3 text-gray-900 text-sm font-medium"> Has Price </span>
-                </label>   
-              </div>
-              <div class="w-40 px-2">
-                <label for="toggle-example2" class="flex w-36 items-center cursor-pointer relative float-start mt-1 pr-5">
-                  <input type="checkbox" id="toggle-example2" class="sr-only">
-                  <div class="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full"></div>
-                  <span class="ml-3 text-gray-900 text-sm font-medium">  delivery </span>
-                </label>
-              </div>
-
-
               <div x-data="{ showPrivacyPolicy: false }">
                 <div class="px-2">
                   <div class="block">                      
@@ -580,6 +564,141 @@
                   </div>
                 </div>
               </div>
+
+              <div x-data="{ showPrivacyPolicy: false }">
+                <div class="px-2">
+                  <div class="block">                      
+                      <button class="bg-gray-200 rounded-full py-1 w-24 px-5" @click="showPrivacyPolicy = true"> <i class="fa-solid fa-filter"></i> All </button>
+                  </div>
+                </div>              
+                <!-- Button to open the privacy policy modal -->        
+                <!-- Privacy Policy Modal -->
+                <div x-show="showPrivacyPolicy" class="fixed z-10 inset-0 flex items-center justify-center">
+                  <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+                  
+                  <div class="relative bg-white rounded-lg overflow-hidden shadow-xl max-w-screen-md w-full m-4" x-transition:enter="transition ease-out duration-300 transform opacity-0 scale-95" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200 transform opacity-100 scale-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" x-cloak>
+                    <!-- Modal panel -->
+                    <div class="px-6 py-4 flex justify-between">
+                      <h3 class="text-lg leading-6 font-medium text-gray-900">  Filtter All </h3>
+                      <button @click="showPrivacyPolicy = false" type="button" class="text-lg font-medium text-black"> <i class="fa fa-close"></i> </button>
+                    </div>
+                    <div class="prose max-w-screen-md p-6 overflow-y-auto" style="max-height: 70vh; background-color: #fff; border: 1px solid #e2e8f0; border-radius: 0.375rem; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);">
+                      <div class="content_getqoute text-center">
+                        <div class="flex flex-col">
+                          <h3 class="text-left font-bold pt-2"> Filtter by size </h3>
+                          <label class="inline-flex items-center mt-3">
+                              <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Al-Kawther-Tanks-Factory</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Marjan</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Summit Fiberglass Factory</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">INDUSTRIES</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Al muktar factory</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">AL-Hussaini trading Est.</span>
+                          </label>                         
+                        </div>     
+                        
+                        <div class="flex flex-col">
+                          <h3 class="text-left font-bold border-t mt-4 pt-2">Filtter by size </h3>
+                          <label class="inline-flex items-center mt-3">
+                              <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Al-Kawther-Tanks-Factory</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Marjan</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Summit Fiberglass Factory</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">INDUSTRIES</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Al muktar factory</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">AL-Hussaini trading Est.</span>
+                          </label>                         
+                        </div> 
+
+
+                        <div class="flex flex-col">
+                          <h3 class="text-left font-bold border-t mt-4 pt-2">Filtter by Color </h3>
+                          <label class="inline-flex items-center mt-3">
+                              <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Al-Kawther-Tanks-Factory</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Marjan</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Summit Fiberglass Factory</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">INDUSTRIES</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Al muktar factory</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">AL-Hussaini trading Est.</span>
+                          </label>                         
+                        </div> 
+
+
+                        <div class="flex flex-col">
+                          <h3 class="text-left font-bold border-t mt-4 pt-2">Filtter by Type </h3>
+                          <label class="inline-flex items-center mt-3">
+                              <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Al-Kawther-Tanks-Factory</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Marjan</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Summit Fiberglass Factory</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">INDUSTRIES</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">Al muktar factory</span>
+                          </label>
+                          <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" ><span class="ml-2 text-gray-700">AL-Hussaini trading Est.</span>
+                          </label>                         
+                        </div> 
+
+
+
+                      </div>
+                    </div>                        
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-40 px-2">
+                <label for="toggle-example" class="flex w-36 items-center cursor-pointer relative float-start mt-1 pr-5">
+                  <input type="checkbox" id="toggle-example" class="sr-only">
+                  <div class="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full"></div>
+                  <span class="ml-3 text-gray-900 text-sm font-medium"> Has Price </span>
+                </label>   
+              </div>
+              <div class="w-40 px-2">
+                <label for="toggle-example2" class="flex w-36 items-center cursor-pointer relative float-start mt-1 pr-5">
+                  <input type="checkbox" id="toggle-example2" class="sr-only">
+                  <div class="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full"></div>
+                  <span class="ml-3 text-gray-900 text-sm font-medium">  delivery </span>
+                </label>
+              </div>
+
+
+              
 
               
               <div class="w-40 px-2">
